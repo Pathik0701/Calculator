@@ -34,6 +34,7 @@ div{
   margin-right: 15px;
   margin-top: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .clear-button {
@@ -45,6 +46,7 @@ div{
   height: 40px;
   border-radius: 20px;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .operation-button {
@@ -55,5 +57,5 @@ div{
   width: 40px;
   height: 40px;
   border-radius: 20px;
-
+  cursor: pointer;
 }
