@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div>
+    <p class="js-total"></p>
+  <p>
+    <button onclick="
+      updateCalculation('1'); 
+      showCalculation();
+      " class="numeric-button">1</button>
+
+    <button onclick="
+      updateCalculation('2');
+      showCalculation();
+    " class="numeric-button">2</button>
+
+    <button onclick="
+      updateCalculation('3');
+      showCalculation();
+    " class="numeric-button">3</button>
+
+    <button onclick="
+      updateCalculation(' + ');
+      showCalculation();
+    " class="operation-button">+</button>
+  </p>
+
+    <p>
+    <button onclick="
+      updateCalculation('4'); 
+      showCalculation();
+    " class="numeric-button">4</button>
+
+    <button onclick="
+      updateCalculation('5');
+      showCalculation();
+    " class="numeric-button">5</button>
+
+    <button onclick="
+      updateCalculation('6');
+      showCalculation();
+    " class="numeric-button">6</button>
+
+    <button onclick="
+      updateCalculation(' - ');
+      showCalculation();
+    " class="operation-button">-</button>
+  </p>
+
+    <p>
+    <button onclick="
+      updateCalculation('7'); 
+      showCalculation();
+    " class="numeric-button">7</button>
+
+    <button onclick="
+      updateCalculation('8');
+      showCalculation();
+    " class="numeric-button">8</button>
+
+    <button onclick="
+      updateCalculation('9');
+      showCalculation();
+    " class="numeric-button">9</button>
+
+    <button onclick="
+      updateCalculation(' * ');
+      showCalculation();
+    " class="operation-button">*</button>
+  </p>
+
+    <p>
+    <button onclick="
+      updateCalculation('0'); 
+      showCalculation();
+    " class="numeric-button">0</button>
+
+    <button onclick="
+      updateCalculation(' . ');
+      showCalculation();
+    " class="numeric-button">.</button>
+
+    <button onclick="
+    //Note: eval takes a string and runs it as code.
+    //Avoid using eval in real world projects since it can potentially be given harmful code to run.
+      calculation = eval(calculation);
+      //console.log(calculation);
+      showCalculation();
+
+      localStorage.setItem('calculation', calculation);
+    " class="numeric-button">=</button>
+
+    <button onclick="
+      updateCalculation(' / ');
+      showCalculation();
+    " class="operation-button">/</button>
+
+  </p>
+
+  <p>
+    <button onclick="
+      calculation = 0;
+      //console.log('calculation');
+      showCalculation();
+      document.querySelector('.js-total').innerText = `0`;
+
+      localStorage.setItem('calculation',calculation);
+    " class="clear-button">Clear</button>
+  </p>
+
+  </div>
+  
+  <script src="calculator.js"></script>
+</body>
+
+</html>
